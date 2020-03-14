@@ -11,6 +11,9 @@ public class Main {
         System.out.println("Sum of 5, 7and 7 (called by " + obj1.getUserName() + ") :  " + obj1.addition(5,7,7));
         System.out.println("Sum of 5, 7 and 13 (called by " + obj2.getUserName() + ") :  " + obj2.addition(5,7,13));
 
+        int[] arr = {5,6,7,8,21,435,147};
+        System.out.println("Sum of integer array : " + obj1.addition(arr));
+
         Interest p25 = new Interest();
         Child1 p30 = new Child1();
         Child2 p15 = new Child2();
