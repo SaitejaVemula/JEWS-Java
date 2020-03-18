@@ -25,6 +25,7 @@ public class PrimeNumber {
     
     // Storing the given number in "num"
     int num = sc.nextInt();
+    sc.close();
     
     if(num == 0) {
 

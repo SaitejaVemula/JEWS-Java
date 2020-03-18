@@ -17,6 +17,8 @@ public class Fibonacci
     
     // Reading the input from the user and storing it in "num"
     num = sc.nextInt();
+    sc.close();
+    
     System.out.println();
 
     // Printing the first number in the series
