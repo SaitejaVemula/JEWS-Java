@@ -27,6 +27,9 @@ public class Factorial
     System.out.print("Enter a number to find its factorial :  ");
     byte num = sc.nextByte();
 
+    // closing the scanner ("sc" object)
+    sc.close();
+
     System.out.println("Factorial of " + num + " is " + factorial(num));
   }
 

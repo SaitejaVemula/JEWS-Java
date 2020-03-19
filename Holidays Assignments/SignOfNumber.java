@@ -23,6 +23,9 @@ public class SignOfNumber {
     // storing the entered number in "num"
     int num = sc.nextInt();
 
+    // closing the scanner ("sc" object)
+    sc.close();
+
     // calling the signOfNumber() method
     signOfNumber(num);
 

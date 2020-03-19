@@ -7,10 +7,15 @@ public class Power {
   public static long power(int num, int pow) {
     long result = 1;
 
-    if(num == 0 || num == 1) {
+    // returns 1 for the following conditions
+    // as 0 power something is 1,
+    // 1 power something 1
+    // and something power 0 is 1.
+    if(num == 0 || num == 1 || pow == 0) {
       return 1;
     }
 
+    // calculating the power
     for(int i = 0; i < pow; i++) {
       result = result * num;
     }
@@ -29,6 +34,11 @@ public class Power {
     // storing the entered number in "pow"
     int pow = sc.nextInt();
 
+
+    // closing the scanner ("sc" object)
+    sc.close();
+
+    // output statament to show the result
     System.out.println(num + " to the power of " + pow + " is : " + power(num, pow));
   }
 

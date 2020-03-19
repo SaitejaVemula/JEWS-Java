@@ -26,6 +26,9 @@ public class Armstrong {
     System.out.print("Enter a number to check if its an armstrong number or not :  ");
     int num = sc.nextInt();
 
+    // closing the scanner ("sc" object)
+    sc.close();
+
     if(isAnArmstrong(num)) {
       System.out.println(num + " is an Armstrong number.");
     } else {
