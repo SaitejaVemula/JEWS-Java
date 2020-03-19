@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class SignOfNumber {
 
-  // created a static void function, that prints the output (i.e., sign of the number)
+  // created a static void method, that prints the output (i.e., sign of the number)
   public static void signOfNumber(int num) {
     if(num == 0) {
       System.out.println("Number is zero, its neither positive, nor negative.");
