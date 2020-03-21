@@ -49,7 +49,7 @@ public class ArithmeticOperations {
     System.out.println("'-' for Substraction");
     System.out.println("'*' for Multiplication");
     System.out.println("'/' for Division");
-    System.out.println("Enter the sign :  ");
+    System.out.print("Enter the sign :  ");
     char c = sc.nextLine().charAt(0);
 
     // Reading two integer values to perform the above operation.
