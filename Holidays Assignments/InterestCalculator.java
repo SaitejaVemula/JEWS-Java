@@ -1,20 +1,21 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class InterestCalculator {
-
-  /*
-  Simple Interest=PTR/100
-  Compound Interest=P((1+R)/100)^n
-  P: Principle
-  */ 
-
+  
   public static float calculateSimpleInterest(float p, int t, float r) {
     return (p * t * r) / 100;
   }
 
-  // public static float calculateCompoundInterest() {
+  public static float calculateCompoundInterest(float p, int t, float r, int c) {
 
-  // }
+    float totalAmount, compoundInterest;
+    r = r / 100;
+    totalAmount = p * (float) Math.pow((1 + (r/c)), c * t);
+    compoundInterest = totalAmount - p;
+
+    return compoundInterest;
+  }
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
@@ -28,13 +29,16 @@ public class InterestCalculator {
     System.out.print("Enter the rate of interest(%) per year :  ");
     float r = sc.nextFloat();
 
-    System.out.print("Enter the number of compoundings ")
+    System.out.print("Enter the number of compoundings per year :  ");
+    int c = sc.nextInt();
 
-    // float simpleInterest = calculateSimpleInterest(p, t, r);
+    sc.close();
 
-    // System.out.println("Simple interest = " + simpleInterest);
-
-
+    float simpleInterest = calculateSimpleInterest(p, t, r);
+    System.out.println("Simple interest = " + simpleInterest);
+    
+    float compoundInterest = calculateCompoundInterest(p, t, r, c);
+    System.out.println("Compound interest = " + compoundInterest);
 
   }
 
