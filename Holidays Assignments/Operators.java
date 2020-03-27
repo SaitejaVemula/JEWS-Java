@@ -43,18 +43,53 @@ public class Operators {
     */
     
     switch(sign) {
-     
+      case "+" : 
+      case "-" : System.out.println(sign + " is both unary and binary operator"); break;
+
+      case "~" : 
+      case "!" : 
+      case "++" : 
+      case "--" : System.out.println(sign + " is a unary operator"); break;
+      
+      case "*" : 
+      case "/" : 
+      case "%" : 
+      case "=" : 
+      case "+=" : 
+      case "-=" : 
+      case "*=" : 
+      case "/=" : 
+      case "%=" : 
+      case ">" : 
+      case ">=" : 
+      case "<" : 
+      case "<=" : 
+      case "==" : 
+      case "!=" : 
+      case "||" : 
+      case "|" : 
+      case "&" : 
+      case "^" : 
+      case "<<" : 
+      case ">>" : 
+      case ">>>" : 
+      case "&&" : System.out.println(sign + " is a binary operator"); break;
+
+      case "?:" : System.out.println(sign + " is a ternary operator"); break;
+
+      default: System.out.println("You've entered an incorrect operator");
+      
     }
   }
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
-    System.out.println("Enter the operator :  ");
+    System.out.print("Enter the operator :  ");
     String sign = sc.nextLine();
     sc.close();
 
-    operatorName(sign);
+    noOfOperands(sign);
 
   }
 }
