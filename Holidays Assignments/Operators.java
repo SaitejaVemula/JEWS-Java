@@ -17,30 +17,44 @@ public class Operators {
 
   public static void operatorName(String sign) {  
 
+    switch(sign) {
+      case "+" :
+      case "-" :
+      case "*" :
+      case "/" :
+      case "%" : System.out.println(sign + " is an Arithmetic operator"); break;
+
+      case "=" : 
+      case "+=" : 
+      case "-=" : 
+      case "*=" : 
+      case "/=" : 
+      case "%=" : System.out.println(sign + " is an Assignment operator"); break;
+      
+      case "==" : 
+      case "!=" :
+      case ">" :
+      case ">=" :
+      case "<" :
+      case "<=" : System.out.println(sign + " is a Relational operator"); break;
+
+      case "&&" : 
+      case "||" :  System.out.println(sign + " is a Logical operator"); break;
+      
+      case "&" : 
+      case "|" : 
+      case "^" : 
+      case "~" :  System.out.println(sign + " is a Bitwise operator"); break;
+      
+      case "<<" : 
+      case ">>" : 
+      case ">>>" :  System.out.println(sign + " is a Shift operator"); break;
+
+    }
+
   }
 
   public static void noOfOperands(String sign) {
-    /* 
-      Unary operators :
-      Unary +
-      Unary -
-      !
-      ++
-      --
-    */
-
-    /* 
-      Binary operators :
-      +
-      -
-      *
-      /
-      %
-      ==
-      &&
-      ||
-
-    */
     
     switch(sign) {
       case "+" : 
@@ -90,6 +104,7 @@ public class Operators {
     sc.close();
 
     noOfOperands(sign);
+    operatorName(sign);
 
   }
 }
