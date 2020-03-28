@@ -39,6 +39,8 @@ public class Operators {
       case  "<<" : 
       case  ">>" : 
       case ">>>" : System.out.println(sign + " is a Shift operator"); break;
+      
+      case  "?:" : System.out.println(sign + " is a ternary operator"); break;
 
       default    : System.out.println("Please enter a valid operator"); 
     } 
@@ -94,6 +96,5 @@ public class Operators {
 
     noOfOperands(sign);
     operatorName(sign);
-
   }
 }
