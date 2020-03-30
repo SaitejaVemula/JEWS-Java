@@ -22,7 +22,9 @@ public class Game {
     Scanner sc = new Scanner(System.in);
     Random rd = new Random();
     System.out.print("Please enter your name :  ");
-    String name = sc.nextLine();
+    String user_name = sc.nextLine();
+    System.out.print("Please enter your opponent's name :  ");
+    String comp_name = sc.nextLine();
     String input;
     boolean isValidInput = false;
 
@@ -30,20 +32,14 @@ public class Game {
 
       System.out.print(name + ", select \"punch\", \"defend\" or \"end\" :  ");
       input = sc.nextLine().toLowerCase();
-
-      System.out.println("Input = " + input + " , isValidInput = " + isValidInput);
       
-      isValidInput = (input == "punch" || input == "defend" || input == "end") ? true : false ;
-      System.out.println("Input = " + input + " , isValidInput = " + isValidInput);
+      isValidInput = (input.equals("punch") || input.equals("defend") || input.equals("end")) ? true : false ;
 
       if(!isValidInput) {
         System.out.println("You've entered wrong option. Please try again.");
       }
 
     } while (!isValidInput);
-
-    System.out.println("You've selected :  " + input);
-
     
   }
 }
