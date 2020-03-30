@@ -3,14 +3,26 @@ import java.util.Scanner;
 
 public class Game {
 
-  int MAX_HEALTH = 100;
-  int MAX_SHIELD = 50;
+  byte MAX_HEALTH = 100;
+  byte MAX_SHIELD = 50;
 
-  int user_health = MAX_HEALTH;
-  int comp_health = MAX_HEALTH;
+  byte user_health = MAX_HEALTH;
+  byte comp_health = MAX_HEALTH;
 
-  int user_shield = 0;
-  int comp_shield = 0;
+  byte user_shield = 0;
+  byte comp_shield = 0;
+
+  // public static byte punch() {
+
+  // } 
+
+  // public static byte defend() {
+    
+  // }
+
+  public static void end() {
+    System.out.println("You've entered \"end\". Quitting.... ");
+  }
 
 
   public static void main(String[] args) {
@@ -40,6 +52,12 @@ public class Game {
       }
 
     } while (!isValidInput);
+
+    switch(input) {
+      case "punch"  : health -= punch(); break;
+      case "defend" : shield += defend(); break;
+      case "end"    : end(); break;
+    }
     
   }
 }
